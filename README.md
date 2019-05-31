@@ -38,25 +38,40 @@ command's syntax and input/output arguments.
 The software does not come with a GUI. Assuming that:
 -'X' is a matrix related to the c-variate time series -a matrix of size c 
 (the number of channels) x N (the number of sample points for each channel),
+
 -'m' is the vector of embedding dimensions,
+
 -'r' is the scalar value related to the threshold value (it is usually equal
 to 0.15),
+
 -'n' is the fuzzy power (it is usually equal to 2),
+
 -'tau' is the vector of time delays,
+
 -'scl' is the number of scales studied (usually 20),
+
 
 the following example performs the MCI analysis (with default parameters) 
 and plots the results:
 
 [Lambda,mci_sh,mci_lo]=MCI(X,m,0.15,2,tau,20);
+
 figure,
+
 plot([1:20],Lambda,'LineWidth',1.5,'Color','k');
+
 ylabel('\Lambda _{MCI}','Fontsize',14)
+
 xlabel('Scale factor (\beta)','Fontsize',14)
+
 str = strcat('MCI_{short}= ',num2str(mci_sh));
+
 str2 = strcat('MCI_{long}= ',num2str(mci_lo));
+
 ylim=get(gca,'ytick');
+
 xlim=get(gca,'xtick');
+
 text(xlim(1),ylim(end-1),{str,str2},'BackgroundColor',[0.98 0.98 0.98],'Fontsize',13)
 
 
