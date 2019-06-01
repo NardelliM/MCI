@@ -36,6 +36,7 @@ path/folder. Type 'help MCI' from the Matlab command window for help on the
 command's syntax and input/output arguments.
 
 The software does not come with a GUI. Assuming that:
+
 -'X' is a matrix related to the c-variate time series -a matrix of size c 
 (the number of channels) x N (the number of sample points for each channel),
 
