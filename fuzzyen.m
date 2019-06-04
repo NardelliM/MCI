@@ -46,14 +46,11 @@ end
 vett1=horzcat(vett1,t1);
 dis=pdist(vett1,'chebychev'); % Chebychev distance is computed between all 
 %possible pairs of embedding vectors with dimension m
-
 gamma=exp((-dis.^fp)/rf); % The the exponential membership function gamma is computed
-
 fuz_m1=sum(gamma)*2/(N*(N-1));
 
 
-%% Increasing the embedding dimension to m+1:
-
+%% Increasing the embedding dimension to m+1
 m=m+1;
 n=m*tau;
 N=size(X,2)-n;
