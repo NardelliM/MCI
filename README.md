@@ -52,7 +52,7 @@ to 0.15),
 -'scl' is the number of scales studied (usually 20),
 
 
-the following example performs the MCI analysis (with default parameters) 
+the following example performs the MCI analysis (with default ranges of short and long scales) 
 and plots the results:
 
 [Lambda,mci_sh,mci_lo]=MCI(X,m,0.15,2,tau,20);
